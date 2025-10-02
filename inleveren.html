@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="return.title">Inleveren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <h1 data-i18n="title">Vista Magazijn Uitleen</h1>
+        <div class="muted" data-i18n="return.title">Inleveren</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="menu">
+        <li><a href="index.html" data-i18n="menu.dashboard">Menu</a></li>
+        <li><a href="voorraad.html" data-i18n="menu.inventory">Voorraad</a></li>
+        <li><a href="bestellingen.html" data-i18n="menu.orders">Bestellingen</a></li>
+        <li><a href="qr.html" data-i18n="menu.qr">QR-scan</a></li>
+        <li><a href="inleveren.html" class="active" data-i18n="menu.return">Inleveren</a></li>
+      </ul>
+      <div class="language-switcher">
+        <select id="lang">
+          <option value="nl">Nederlands</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Inlever content -->
+    <main class="content">
+      <h2 data-i18n="return.title">Materialen inleveren</h2>
+      <p class="muted" data-i18n="return.subtitle"></p>
+
+      <!-- Zoek/scan invoer -->
+      <div class="search">
+        <input type="search" placeholder="" data-i18n-placeholder="return.search">
+        <button class="btn" data-i18n="return.scanBtn"> QR-scan</button>
+      </div>
+
+      <!-- Inlever tabel -->
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="col.item">Artikel</th>
+              <th data-i18n="col.studentId">Leerlingnr</th>
+              <th data-i18n="col.name">Naam</th>
+              <th data-i18n="col.returnDate">Inleverdatum</th>
+              <th data-i18n="col.actions">Actie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hamer</td>
+              <td>12345</td>
+              <td>J. Peters</td>
+              <td>01-10-2025</td>
+              <td><button class="btn ghost" data-i18n="return.delivered">✔️ Ingeleverd</button></td>
+            </tr>
+            <tr>
+              <td>Boormachine</td>
+              <td>67890</td>
+              <td>L. Zhang</td>
+              <td>01-10-2025</td>
+              <td><button class="btn ghost" data-i18n="return.delivered">✔️ Ingeleverd</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; Vista College Magazijn
+  </footer>
+
+  <script src="magazijn.js"></script>
+</body>
+</html>

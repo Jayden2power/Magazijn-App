@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="inventory.title">Voorraadbeheer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <h1 data-i18n="title">Vista Magazijn Uitleen</h1>
+        <div class="muted" data-i18n="inventory.title">Voorraad</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar">
+      <ul class="menu">
+        <li><a href="index.html" data-i18n="menu.dashboard">Menu</a></li>
+        <li><a href="voorraad.html" class="active" data-i18n="menu.inventory">Voorraad</a></li>
+        <li><a href="bestellingen.html" data-i18n="menu.orders">Bestellingen</a></li>
+        <li><a href="qr.html" data-i18n="menu.qr">QR-scan</a></li>
+        <li><a href="inleveren.html" data-i18n="menu.return">Inleveren</a></li>
+      </ul>
+      <div class="language-switcher">
+        <select id="lang">
+          <option value="nl">Nederlands</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="content">
+        <h2 data-i18n="inventory.title">Voorraad</h2>
+      <!-- Horizontaal formulier nieuw artikel -->
+      <div class="card" style="margin-bottom:16px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
+          <input type="text" id="itemName" placeholder="Artikelnaam" style="flex:1;" data-i18n-placeholder="inventory.itemName">
+          <input type="number" id="itemQty" placeholder="Aantal" style="width:80px;" data-i18n-placeholder="inventory.qty">
+          <select id="itemLoc" style="width:150px;">
+            <option value="Heerlen">Heerlen</option>
+            <option value="Sittard">Sittard</option>
+            <option value="Maastricht">Maastricht</option>
+          </select>
+          <input type="date" id="itemDate" style="width:150px;">
+          <button class="btn" id="addItemBtn" data-i18n="inventory.addBtn">➕ Toevoegen</button>
+        </div>
+      </div>
+
+      <!-- Tabel voorraad -->
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="col.item">Artikelnaam</th>
+              <th data-i18n="col.qty">Aantal</th>
+              <th data-i18n="col.loc">Locatie</th>
+              <th data-i18n="col.date">Keuringsdatum</th>
+              <th data-i18n="col.actions">Acties</th>
+            </tr>
+          </thead>
+          <tbody id="inventory">
+            <!-- rijen via JS -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; Vista College Magazijn
+  </footer>
+
+  <script src="magazijn.js"></script>
+</body>
+</html>

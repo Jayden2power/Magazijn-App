@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="orders.title">Bestellingen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <h1 data-i18n="title">Vista Magazijn Uitleen</h1>
+        <div class="muted" data-i18n="orders.title">Bestellingen</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app">
+    <!-- Sidebar menu -->
+    <aside class="sidebar">
+      <ul class="menu">
+        <li><a href="index.html" data-i18n="menu.dashboard">Menu</a></li>
+        <li><a href="voorraad.html" data-i18n="menu.inventory">Voorraad</a></li>
+        <li><a href="bestellingen.html" class="active" data-i18n="menu.orders">Bestellingen</a></li>
+        <li><a href="qr.html" data-i18n="menu.qr">QR-scan</a></li>
+        <li><a href="inleveren.html" data-i18n="menu.reports">Inleveren</a></li>
+      </ul>
+      <div class="language-switcher">
+        <label for="lang"></label>
+        <select id="lang">
+          <option value="nl">Nederlands</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </aside>
+
+    <main class="content">
+      <h2 data-i18n="orders.title">Bestellingen</h2>
+      <p class="muted" data-i18n="orders.subtitle">Overzicht van recente bestellingen</p>
+
+      <table id="orders">
+        <thead>
+          <tr>
+            <th data-i18n="col.studentId">Leerlingnr</th>
+            <th data-i18n="col.name">Naam</th>
+            <th data-i18n="col.item">Artikel</th>
+            <th data-i18n="col.status">Status</th>
+            <th data-i18n="col.date">Datum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12345</td>
+            <td>J. Peters</td>
+            <td>Hamer</td>
+            <td><span class="pill" data-status="reserved">Gereserveerd</span></td>
+            <td>10-12-2025</td>
+          </tr>
+          <tr>
+            <td>67890</td>
+            <td>L. Zhang</td>
+            <td>Boormachine</td>
+            <td><span class="pill" data-status="returned">Ingeleverd</span></td>
+            <td>12-12-2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <footer>
+    &copy; Vista College Magazijn
+  </footer>
+
+  <script src="magazijn.js"></script>
+</body>
+</html>
